@@ -7,7 +7,7 @@ const routes: Array<RouteConfig> = [
     {
         path: "/",
         redirect: {
-            name: "demo"
+            name: "test"
         }
     },
     {

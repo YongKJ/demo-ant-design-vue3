@@ -6,6 +6,7 @@ import {VueParticlesService} from "@/common/service/VueParticlesService";
 import {WallpaperService} from "@/common/service/WallpaperService";
 import {ValidCodeService} from "@/common/service/ValidCodeService";
 import {DemoTestService} from "@/common/service/DemoTestService";
+import {WallpaperPlusService} from "@/common/service/WallpaperPlusService";
 
 export abstract class PatchService extends RouterService {
 
@@ -29,6 +30,10 @@ export abstract class PatchService extends RouterService {
 
     get demoTestService(): DemoTestService {
         return this.getService(Class.DemoTestService);
+    }
+
+    get wallpaperPlusService(): WallpaperPlusService {
+        return this.getService(Class.WallpaperPlusService);
     }
 
 }
