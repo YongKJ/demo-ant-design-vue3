@@ -1,63 +1,63 @@
-import {VueConstructor} from 'vue'
+import {App} from "vue";
 import {
-    Row,
-    Col,
-    Link,
-    Main,
-    Form,
-    Table,
-    Input,
-    Image,
-    Button,
-    Dialog,
-    Upload,
-    Option,
-    Select,
-    Tooltip,
-    Checkbox,
-    Progress,
-    Dropdown,
-    FormItem,
-    Container,
-    Pagination,
-    PageHeader,
-    TableColumn,
-    ButtonGroup,
-    DropdownMenu,
-    DropdownItem,
-} from "element-ui";
+    ElRow,
+    ElCol,
+    ElLink,
+    ElMain,
+    ElForm,
+    ElTable,
+    ElInput,
+    ElImage,
+    ElButton,
+    ElDialog,
+    ElUpload,
+    ElOption,
+    ElSelect,
+    ElTooltip,
+    ElCheckbox,
+    ElProgress,
+    ElDropdown,
+    ElFormItem,
+    ElContainer,
+    ElPagination,
+    ElPageHeader,
+    ElTableColumn,
+    ElButtonGroup,
+    ElDropdownMenu,
+    ElDropdownItem,
+} from "element-plus";
 
 export const ElementUI = {
-    install(Vue: VueConstructor) {
-        Vue.component(Row.name, Row);
-        Vue.component(Col.name, Col);
+    install(Vue: App) {
+        Vue.component(ElRow.name, ElRow);
+        Vue.component(ElCol.name, ElCol);
 
-        Vue.component(Form.name, Form);
-        Vue.component(Input.name, Input);
-        Vue.component(Upload.name, Upload);
-        Vue.component(FormItem.name, FormItem);
+        Vue.component(ElForm.name, ElForm);
+        Vue.component(ElInput.name, ElInput);
+        Vue.component(ElUpload.name, ElUpload);
+        Vue.component(ElFormItem.name, ElFormItem);
 
-        Vue.component(Button.name, Button);
-        Vue.component(Select.name, Select);
-        Vue.component(Option.name, Option);
-        Vue.component(Dialog.name, Dialog);
-        Vue.component(Checkbox.name, Checkbox);
+        Vue.component(ElButton.name, ElButton);
+        Vue.component(ElSelect.name, ElSelect);
+        Vue.component(ElOption.name, ElOption);
+        Vue.component(ElDialog.name, ElDialog);
+        Vue.component(ElCheckbox.name, ElCheckbox);
 
-        Vue.component(Progress.name, Progress);
-        Vue.component(Pagination.name, Pagination);
-        Vue.component(PageHeader.name, PageHeader);
-        Vue.component(ButtonGroup.name, ButtonGroup);
+        Vue.component(ElProgress.name, ElProgress);
+        Vue.component(ElPagination.name, ElPagination);
+        Vue.component(ElPageHeader.name, ElPageHeader);
+        Vue.component(ElButtonGroup.name, ElButtonGroup);
 
-        Vue.component(Main.name, Main);
-        Vue.component(Tooltip.name, Tooltip);
-        Vue.component(Dropdown.name, Dropdown);
-        Vue.component(Container.name, Container);
-        Vue.component(DropdownMenu.name, DropdownMenu);
-        Vue.component(DropdownItem.name, DropdownItem);
+        Vue.component(ElMain.name, ElMain);
+        Vue.component(ElTooltip.name, ElTooltip);
+        Vue.component(ElDropdown.name, ElDropdown);
+        Vue.component(ElContainer.name, ElContainer);
+        Vue.component(ElDropdownMenu.name, ElDropdownMenu);
+        Vue.component(ElDropdownItem.name, ElDropdownItem);
 
-        Vue.component(Link.name, Link);
-        Vue.component(Image.name, Image);
-        Vue.component(Table.name, Table);
-        Vue.component(TableColumn.name, TableColumn);
+        Vue.component(ElLink.name, ElLink);
+        Vue.component(ElImage.name, ElImage);
+        Vue.component(ElTable.name, ElTable);
+        Vue.component(ElTableColumn.name, ElTableColumn);
     }
 }
