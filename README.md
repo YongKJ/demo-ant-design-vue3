@@ -1,4 +1,4 @@
-# demo-element-ui-vue2.6
+# demo-element-ui-vue2.7
 
 ## Project setup
 ```
