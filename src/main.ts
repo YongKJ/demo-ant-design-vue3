@@ -3,6 +3,11 @@ import App from './App.vue'
 import router from './router'
 
 // @ts-ignore
+import Particles from "vue2-particles";
+
+Vue.use(Particles);
+
+// @ts-ignore
 import HappyScroll from "vue-happy-scroll";
 import "vue-happy-scroll/docs/happy-scroll.css";
 
