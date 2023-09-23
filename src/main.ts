@@ -2,6 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
+// @ts-ignore
+import HappyScroll from "vue-happy-scroll";
+import "vue-happy-scroll/docs/happy-scroll.css";
+
+Vue.use(HappyScroll);
+
 import VueCookies from 'vue-cookies';
 
 Vue.use(VueCookies);
