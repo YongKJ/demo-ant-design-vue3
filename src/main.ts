@@ -6,7 +6,7 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import 'element-plus/dist/index.css';
 import {ElementUI} from "@/common/config/ElementUI";
-import "ant-design-vue/dist/antd.less";
+import 'ant-design-vue/dist/reset.css';
 import {AntDesign} from "@/common/config/AntDesign";
 
 NProgress.configure({easing: 'ease', speed: 500, showSpinner: false});
@@ -16,6 +16,7 @@ router.beforeEach((to, from, next) => {
   switch (to.path) {
     case "/test":
     case "/demo":
+    case "/design":
       document.title = (<Record<string, any>>to.meta).title;
       next();
       break;

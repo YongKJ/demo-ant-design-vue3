@@ -1,5 +1,6 @@
 export enum Class {
 
+    AntDesignTestService = "AntDesignTestService",
     WallpaperPlusService = "WallpaperPlusService",
     VueParticlesService = "VueParticlesService",
     WallpaperService = "WallpaperService",
