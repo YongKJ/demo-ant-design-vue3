@@ -1,4 +1,4 @@
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 import {Class} from "@/common/pojo/enum/Class";
 import {Container, Engine} from "tsparticles-engine";
 import {loadFull} from "tsparticles";
@@ -9,7 +9,7 @@ import {CommonService} from "@/common/core/CommonService";
 
 export class WallpaperPlusService extends CommonService<WallpaperPlusService> {
 
-    public constructor(vue: Vue) {
+    public constructor(vue: ComponentPublicInstance) {
         super(vue);
     }
 

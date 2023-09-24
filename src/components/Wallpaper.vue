@@ -1,12 +1,6 @@
 <template>
   <div class="main" :style="wallpaperService.getBgImgStyle(bgImg)">
-    <happy-scroll
-        resize
-        size="6"
-        ref="scroll"
-        :style="wallpaperService.getScrollbarHeightStyle()"
-        :color="'rgba(' + color + ',0.3)'"
-    >
+    <custom-scrollbar :style="wallpaperService.getScrollbarHeightStyle()">
       <div :style="wallpaperService.getMainWidthStyle()">
         <div id="content-details" style="position: relative; margin: 0 auto">
           <vue-particles
@@ -31,12 +25,14 @@
           <slot></slot>
         </div>
       </div>
-    </happy-scroll>
+    </custom-scrollbar>
   </div>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
+import 'custom-vue-scrollbar/dist/style.css';
+import CustomScrollbar from 'custom-vue-scrollbar';
 import {WallpaperService} from "@/common/service/WallpaperService";
 import {WallpaperImage} from "@/common/pojo/po/WallpaperImage";
 import VueParticles from "@/components/VueParticles.vue";
@@ -71,7 +67,8 @@ export default defineComponent({
     this.wallpaperService.initData();
   },
   components: {
-    VueParticles
+    VueParticles,
+    CustomScrollbar
   }
 });
 </script>

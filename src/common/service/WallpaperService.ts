@@ -1,10 +1,10 @@
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 import {Class} from "@/common/pojo/enum/Class";
 import {CommonService} from "@/common/core/CommonService";
 
 export class WallpaperService extends CommonService<WallpaperService> {
 
-    public constructor(vue: Vue) {
+    public constructor(vue: ComponentPublicInstance) {
         super(vue);
     }
 
