@@ -4,7 +4,7 @@ import router from './router'
 import VueCookies from 'vue3-cookies'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-import "element-ui/lib/theme-chalk/index.css";
+import 'element-plus/dist/index.css';
 import {ElementUI} from "@/common/config/ElementUI";
 
 NProgress.configure({easing: 'ease', speed: 500, showSpinner: false});

@@ -1,6 +1,4 @@
-import {MessageType} from "element-ui/types/message";
-import {Message, MessageBox} from "element-ui";
-import {MessageBoxData} from "element-ui/types/message-box";
+import {ElMessageBox, ElMessage, MessageBoxData} from "element-plus";
 import {ResizeService} from "@/common/core/ResizeService";
 
 export abstract class TipsService extends ResizeService {
@@ -17,8 +15,8 @@ export abstract class TipsService extends ResizeService {
         TipsService.confirm(message, title, "error");
     }
 
-    private static confirm(message: string, title: string, type: MessageType, thenFunc?: () => void, catchFunc?: () => void): void {
-        MessageBox.confirm(message, title, {
+    private static confirm(message: string, title: string, type: '' | 'success' | 'warning' | 'info' | 'error', thenFunc?: () => void, catchFunc?: () => void): void {
+        ElMessageBox.confirm(message, title, {
             confirmButtonText: "确定",
             cancelButtonText: "返回",
             type: type
@@ -32,7 +30,7 @@ export abstract class TipsService extends ResizeService {
     }
 
     protected prompt(message: string, title: string, inputInfo: string, inputValue?: string, thenFunc?: (message: MessageBoxData) => void, catchFunc?: () => void): void {
-        MessageBox.prompt(message, title, {
+        ElMessageBox.prompt(message, title, {
             confirmButtonText: "确定",
             cancelButtonText: "取消",
             inputPlaceholder: inputInfo,
@@ -43,19 +41,19 @@ export abstract class TipsService extends ResizeService {
     }
 
     protected success(msg: string): void {
-        Message.success(msg);
+        ElMessage.success(msg);
     }
 
     protected warning(msg: string): void {
-        Message.warning(msg);
+        ElMessage.warning(msg);
     }
 
     protected error(msg: string): void {
-        Message.error(msg);
+        ElMessage.error(msg);
     }
 
     protected info(msg: string): void {
-        Message.info(msg);
+        ElMessage.info(msg);
     }
 
 }
