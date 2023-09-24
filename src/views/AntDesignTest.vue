@@ -1,5 +1,5 @@
 <template>
-  <wallpaper-plus>
+  <wallpaper type="snow">
     <a-button
         type="primary"
         style="z-index: 0"
@@ -58,12 +58,12 @@
             @click="antDesignTestService.reset()">忘记密码？</a-button>
       </a-col>
     </a-row>
-  </wallpaper-plus>
+  </wallpaper>
 </template>
 
 <script lang="ts">
-import WallpaperPlus from "@/components/WallpaperPlus.vue";
 import {defineComponent} from "vue";
+import Wallpaper from "@/components/Wallpaper.vue";
 import {AntDesignTestService} from "@/common/service/AntDesignTestService";
 
 export default defineComponent({
@@ -74,7 +74,7 @@ export default defineComponent({
     }
   },
   components: {
-    WallpaperPlus,
+    Wallpaper,
   },
 });
 </script>
