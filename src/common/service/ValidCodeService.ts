@@ -1,5 +1,5 @@
 import {CommonService} from "@/common/core/CommonService";
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 import {Class} from "@/common/pojo/enum/Class";
 import autobind from "autobind-decorator";
 
@@ -9,7 +9,7 @@ export class ValidCodeService extends CommonService<ValidCodeService> {
     private readonly length: number;
     private _codeList: Array<Record<string, any>>;
 
-    public constructor(vue: Vue) {
+    public constructor(vue: ComponentPublicInstance) {
         super(vue);
         this._validCode = "";
         this.length = this.getProp("length");

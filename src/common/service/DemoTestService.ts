@@ -1,5 +1,5 @@
 import {CommonService} from "@/common/core/CommonService";
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 import {Class} from "@/common/pojo/enum/Class";
 import {LogUtil} from "@/common/util/LogUtil";
 import {Log} from "@/common/pojo/dto/Log";
@@ -21,7 +21,7 @@ export class DemoTestService extends CommonService<DemoTestService> {
     private _totalRecord: number;
     private _files: Array<StreamFile>;
 
-    public constructor(vue: Vue) {
+    public constructor(vue: ComponentPublicInstance) {
         super(vue);
         this._key = 1;
         this._url = "";
@@ -41,7 +41,6 @@ export class DemoTestService extends CommonService<DemoTestService> {
             this.info(msg);
             LogUtil.loggerLine(Log.of("DemoTestService", "testEvent", "msg", msg));
         });
-        LogUtil.loggerLine(Log.of("DemoTestService", "initData", "message", this.vue.$message));
         LogUtil.loggerLine(Log.of("DemoTestService", "initData", "vue", this.vue));
         LogUtil.loggerLine(Log.of("DemoTestService", "initData", "WallpaperService", this.wallpaperService));
     }

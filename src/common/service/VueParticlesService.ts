@@ -1,11 +1,11 @@
 import {CommonService} from "@/common/core/CommonService";
 import {Class} from "@/common/pojo/enum/Class";
 import "particles.js-strict";
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 
 export class VueParticlesService extends CommonService<VueParticlesService> {
 
-    public constructor(vue: Vue) {
+    public constructor(vue: ComponentPublicInstance) {
         super(vue);
     }
 
