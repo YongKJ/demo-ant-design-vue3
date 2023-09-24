@@ -2,7 +2,7 @@ import {debounce} from "lodash-es";
 import {LogUtil} from "@/common/util/LogUtil";
 import {Log} from "@/common/pojo/dto/Log";
 import {GenUtil} from "@/common/util/GenUtil";
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 import {StoreService} from "@/common/core/StoreService";
 
 export abstract class ResizeService extends StoreService {
@@ -11,7 +11,7 @@ export abstract class ResizeService extends StoreService {
         super();
     }
 
-    protected abstract get vue(): Vue;
+    protected abstract get vue(): ComponentPublicInstance;
 
     protected screenResizeWatch(refName?: string): void {
         window.addEventListener("resize", debounce(async () => {

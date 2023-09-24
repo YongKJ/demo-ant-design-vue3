@@ -36,12 +36,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import {defineComponent} from "vue";
 import {WallpaperService} from "@/common/service/WallpaperService";
 import {WallpaperImage} from "@/common/pojo/po/WallpaperImage";
 import VueParticles from "@/components/VueParticles.vue";
 
-export default Vue.extend({
+export default defineComponent({
   name: "Wallpaper",
   props: {
     bgImg: {

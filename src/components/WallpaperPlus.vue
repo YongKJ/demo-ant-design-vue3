@@ -23,11 +23,11 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import {defineComponent} from "vue";
 import {WallpaperPlusService} from "@/common/service/WallpaperPlusService";
 import {WallpaperImage} from "@/common/pojo/po/WallpaperImage";
 
-export default Vue.extend({
+export default defineComponent({
   name: "WallpaperPlus",
   props: {
     bgImg: {

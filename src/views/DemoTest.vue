@@ -88,12 +88,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import {defineComponent} from "vue";
 import Wallpaper from "@/components/Wallpaper.vue";
 import ValidCode from "@/components/ValidCode.vue";
 import {DemoTestService} from "@/common/service/DemoTestService";
 
-export default Vue.extend({
+export default defineComponent({
   name: "DemoTest",
   data() {
     return {

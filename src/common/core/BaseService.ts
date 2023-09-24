@@ -1,11 +1,11 @@
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 import EventEmitter2 from "eventemitter2";
 import {CommonService} from "@/common/core/CommonService";
 import {Class} from "@/common/pojo/enum/Class";
 
 export interface BaseService<U> {
 
-    vue: Vue;
+    vue: ComponentPublicInstance;
 
     service: U;
 
@@ -15,9 +15,9 @@ export interface BaseService<U> {
 
     on(event: string, func: (...values: any[]) => void): void;
 
-    hasService<T extends CommonService<any>>(clazz: Class | (new (vue: Vue) => T), index?: number): boolean;
+    hasService<T extends CommonService<any>>(clazz: Class | (new (vue: ComponentPublicInstance) => T), index?: number): boolean;
 
-    getService<T extends CommonService<any>>(clazz: Class | (new (vue: Vue) => T), index?: number): T;
+    getService<T extends CommonService<any>>(clazz: Class | (new (vue: ComponentPublicInstance) => T), index?: number): T;
 
     getValue(name: string): any;
 

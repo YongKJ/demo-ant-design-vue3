@@ -20,10 +20,10 @@
   ></div>
 </template>
 <script lang="ts">
-import Vue from "vue";
+import {defineComponent} from "vue";
 import {VueParticlesService} from "@/common/service/VueParticlesService";
 
-export default Vue.extend({
+export default defineComponent({
   name: 'VueParticles',
   data() {
     return {

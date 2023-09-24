@@ -1,10 +1,10 @@
 import {GenUtil} from "@/common/util/GenUtil";
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 import {CookieService} from "@/common/core/CookieService";
 
 export abstract class RouterService extends CookieService {
 
-    protected abstract get vue(): Vue;
+    protected abstract get vue(): ComponentPublicInstance;
 
     protected constructor() {
         super();
@@ -32,7 +32,7 @@ export abstract class RouterService extends CookieService {
     }
 
     get routerName(): string {
-        return <string>this.vue.$router.currentRoute.name;
+        return <string>this.vue.$router.currentRoute.value.name;
     }
 
 }

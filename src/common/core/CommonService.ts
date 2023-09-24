@@ -1,26 +1,26 @@
 import {BaseService} from "@/common/core/BaseService";
 import EventEmitter2 from "eventemitter2";
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 import {Class} from "@/common/pojo/enum/Class";
 import {GeneralService} from "@/common/core/GeneralService";
 
 export abstract class CommonService<U> extends GeneralService implements BaseService<U> {
 
-    private readonly _vue: Vue;
+    private readonly _vue: ComponentPublicInstance;
     public static service: CommonService<any>;
     private static readonly _emitter = new EventEmitter2();
-    private static readonly mapVue = new Map<string, Vue>();
+    private static readonly mapVue = new Map<string, ComponentPublicInstance>();
 
-    protected constructor(vue: Vue) {
+    protected constructor(vue: ComponentPublicInstance) {
         super();
         this._vue = vue;
         if (CommonService.mapVue.size === 0) CommonService.service = this;
         CommonService.mapVue.set(this.getServiceName() + (this.getProp("index") || 0), this.vue);
     }
 
-    private getVue(name: string, index?: number): Vue {
+    private getVue(name: string, index?: number): ComponentPublicInstance {
         index = index || (name === this.getServiceName() ? (this.getProp("index") || 0) : 0);
-        return <Vue>CommonService.mapVue.get(name + index);
+        return <ComponentPublicInstance>CommonService.mapVue.get(name + index);
     }
 
     private getServiceName(className?: string): string {
@@ -32,14 +32,14 @@ export abstract class CommonService<U> extends GeneralService implements BaseSer
 
     protected abstract getClassName(): string;
 
-    public hasService<T extends CommonService<any>>(clazz: Class | (new (vue: Vue) => T), index?: number): boolean {
+    public hasService<T extends CommonService<any>>(clazz: Class | (new (vue: ComponentPublicInstance) => T), index?: number): boolean {
         let className = typeof clazz === "string" ? clazz : (<Record<string, any>>clazz).class;
         let serviceName = this.getServiceName(className);
         let vue = this.getVue(serviceName, index || 0);
         return typeof vue !== "undefined";
     }
 
-    public getService<T extends CommonService<any>>(clazz: Class | (new (vue: Vue) => T), index?: number): T {
+    public getService<T extends CommonService<any>>(clazz: Class | (new (vue: ComponentPublicInstance) => T), index?: number): T {
         let className = typeof clazz === "string" ? clazz : (<Record<string, any>>clazz).class;
         let serviceName = this.getServiceName(className);
         let vue = this.getVue(serviceName, index || 0);
@@ -55,7 +55,7 @@ export abstract class CommonService<U> extends GeneralService implements BaseSer
     }
 
     public getProp(name: string): any {
-        return this.vue.$props ? this.vue.$props[name] : undefined;
+        return this.vue.$props ? (<Record<string, any>>this.vue.$props)[name] : undefined;
     }
 
     public getRef(name: string): any {
@@ -66,7 +66,7 @@ export abstract class CommonService<U> extends GeneralService implements BaseSer
         return CommonService._emitter;
     }
 
-    get vue(): Vue {
+    get vue(): ComponentPublicInstance {
         return this._vue;
     }
 

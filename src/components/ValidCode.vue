@@ -15,10 +15,10 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import {defineComponent} from "vue";
 import {ValidCodeService} from "@/common/service/ValidCodeService";
 
-export default Vue.extend({
+export default defineComponent({
   name: "ValidCode",
   props: {
     width: {

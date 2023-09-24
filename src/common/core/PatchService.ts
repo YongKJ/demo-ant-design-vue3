@@ -1,5 +1,5 @@
 import {CommonService} from "@/common/core/CommonService";
-import Vue from "vue";
+import {ComponentPublicInstance} from "vue";
 import {Class} from "@/common/pojo/enum/Class";
 import {RouterService} from "@/common/core/RouterService";
 import {VueParticlesService} from "@/common/service/VueParticlesService";
@@ -14,7 +14,7 @@ export abstract class PatchService extends RouterService {
         super();
     }
 
-    protected abstract getService<T extends CommonService<any>>(clazz: Class | (new (vue: Vue) => T), index?: number): T;
+    protected abstract getService<T extends CommonService<any>>(clazz: Class | (new (vue: ComponentPublicInstance) => T), index?: number): T;
 
     get vueParticlesService(): VueParticlesService {
         return this.getService(Class.VueParticlesService);
