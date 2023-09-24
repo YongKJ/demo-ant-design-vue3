@@ -20,6 +20,7 @@
 import {defineComponent} from "vue";
 import 'custom-vue-scrollbar/dist/style.css';
 import CustomScrollbar from 'custom-vue-scrollbar';
+import Particles from "@/components/Particles.vue";
 import {WallpaperPlusService} from "@/common/service/WallpaperPlusService";
 import {WallpaperImage} from "@/common/pojo/po/WallpaperImage";
 
@@ -44,6 +45,7 @@ export default defineComponent({
     this.wallpaperPlusService.initData();
   },
   components: {
+    Particles,
     CustomScrollbar
   }
 });
