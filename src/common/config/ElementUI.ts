@@ -25,6 +25,7 @@ import {
     ElButtonGroup,
     ElDropdownMenu,
     ElDropdownItem,
+    ElConfigProvider,
 } from "element-plus";
 
 export const ElementUI = {
@@ -59,5 +60,6 @@ export const ElementUI = {
         Vue.component(ElImage.name, ElImage);
         Vue.component(ElTable.name, ElTable);
         Vue.component(ElTableColumn.name, ElTableColumn);
+        Vue.component(ElConfigProvider.name, ElConfigProvider);
     }
 }
