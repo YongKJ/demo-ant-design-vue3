@@ -3,6 +3,7 @@ import {
     ElRow,
     ElCol,
     ElLink,
+    ElIcon,
     ElMain,
     ElForm,
     ElTable,
@@ -25,8 +26,64 @@ import {
     ElButtonGroup,
     ElDropdownMenu,
     ElDropdownItem,
-    ElConfigProvider,
+    ElConfigProvider
 } from "element-plus";
+
+import {
+    UploadFilled,
+    CaretBottom,
+    Back,
+    Right,
+    Folder,
+    FolderOpened,
+    FolderChecked,
+    Search,
+    StarFilled,
+    Tools,
+    CopyDocument,
+    DocumentAdd,
+    FolderAdd,
+    Upload,
+    Link,
+    Download,
+    Sell,
+    Delete,
+    DocumentCopy,
+    Scissor,
+    List,
+    RefreshRight,
+    Refresh,
+    Clock,
+    DataAnalysis,
+    Connection,
+    RefreshLeft,
+    Warning,
+    MessageBox,
+    EditPen,
+    PictureFilled,
+    SoldOut,
+    Document,
+    VideoPlay,
+    FolderDelete,
+    DocumentDelete,
+    VideoCamera,
+    Picture,
+    Handbag,
+    Memo,
+    Tickets,
+    Brush,
+    MagicStick,
+    Key,
+    Plus,
+    Minus,
+    Share,
+    IceCreamRound,
+    Platform,
+    Notification,
+    MoreFilled,
+    Notebook,
+// @ts-ignore
+} from "@element-plus/icons-vue";
 
 export const ElementUI = {
     install(Vue: App) {
@@ -57,9 +114,63 @@ export const ElementUI = {
         Vue.component(ElDropdownItem.name, ElDropdownItem);
 
         Vue.component(ElLink.name, ElLink);
+        Vue.component(ElIcon.name, ElIcon);
         Vue.component(ElImage.name, ElImage);
         Vue.component(ElTable.name, ElTable);
         Vue.component(ElTableColumn.name, ElTableColumn);
         Vue.component(ElConfigProvider.name, ElConfigProvider);
+
+        Vue.component(UploadFilled.name, UploadFilled);
+        Vue.component(CaretBottom.name, CaretBottom);
+        Vue.component(Back.name, Back);
+        Vue.component(Right.name, Right);
+        Vue.component(Folder.name, Folder);
+        Vue.component(FolderOpened.name, FolderOpened);
+        Vue.component(FolderChecked.name, FolderChecked);
+        Vue.component(Search.name, Search);
+        Vue.component(StarFilled.name, StarFilled);
+        Vue.component(Tools.name, Tools);
+        Vue.component(CopyDocument.name, CopyDocument);
+        Vue.component(DocumentAdd.name, DocumentAdd);
+        Vue.component(FolderAdd.name, FolderAdd);
+        Vue.component(Upload.name, Upload);
+        Vue.component(Link.name, Link);
+        Vue.component(Download.name, Download);
+        Vue.component(Sell.name, Sell);
+        Vue.component(Delete.name, Delete);
+        Vue.component(DocumentCopy.name, DocumentCopy);
+        Vue.component(Scissor.name, Scissor);
+        Vue.component(List.name, List);
+        Vue.component(RefreshRight.name, RefreshRight);
+        Vue.component(Refresh.name, Refresh);
+        Vue.component(Clock.name, Clock);
+        Vue.component(DataAnalysis.name, DataAnalysis);
+        Vue.component(Connection.name, Connection);
+        Vue.component(RefreshLeft.name, RefreshLeft);
+        Vue.component(Warning.name, Warning);
+        Vue.component(MessageBox.name, MessageBox);
+        Vue.component(EditPen.name, EditPen);
+        Vue.component(PictureFilled.name, PictureFilled);
+        Vue.component(SoldOut.name, SoldOut);
+        Vue.component(Document.name, Document);
+        Vue.component(VideoPlay.name, VideoPlay);
+        Vue.component(FolderDelete.name, FolderDelete);
+        Vue.component(DocumentDelete.name, DocumentDelete);
+        Vue.component(VideoCamera.name, VideoCamera);
+        Vue.component(Picture.name, Picture);
+        Vue.component(Handbag.name, Handbag);
+        Vue.component(Memo.name, Memo);
+        Vue.component(Tickets.name, Tickets);
+        Vue.component(Brush.name, Brush);
+        Vue.component(MagicStick.name, MagicStick);
+        Vue.component(Key.name, Key);
+        Vue.component(Plus.name, Plus);
+        Vue.component(Minus.name, Minus);
+        Vue.component(Share.name, Share);
+        Vue.component(IceCreamRound.name, IceCreamRound);
+        Vue.component(Platform.name, Platform);
+        Vue.component(Notification.name, Notification);
+        Vue.component(MoreFilled.name, MoreFilled);
+        Vue.component(Notebook.name, Notebook);
     }
 }

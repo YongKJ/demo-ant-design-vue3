@@ -19,7 +19,7 @@
             :on-change="testDemoService.changeFiles"
             :http-request="testDemoService.uploadFiles"
         >
-          <i class="el-icon-upload avatar-uploader-icon-computer"></i>
+          <el-icon class="avatar-uploader-icon-computer"><UploadFilled /></el-icon>
           <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
         </el-upload>
       </el-form-item>
@@ -121,13 +121,17 @@ export default defineComponent({
   border-radius: 4px;
 }
 
-:deep(.el-input--large .el-input__wrapper) {
-  padding: 1px 0;
+.avatar-uploader-icon-computer {
+  font-size: 70px;
+  color: #C0C4CC;
+  position: relative;
+  top: 8px;
+  text-align: center;
 }
 
-:deep(.el-input__inner) {
-  padding: 0 15px;
-  border-radius: 4px;
+:deep(.el-upload) {
+  --el-upload-dragger-padding-horizontal: 26.5px;
+  --el-upload-dragger-padding-vertical: 10px;
 }
 
 /deep/ .el-upload-list__item-name:hover {
