@@ -11,6 +11,7 @@
     "@types/crypto-js": "^4.1.2",
     "@types/lodash-es": "^4.17.9",
     "@types/nprogress": "^0.2.0",
+    "ant-design-vue": "^4.0.3",
     "autobind-decorator": "^2.4.0",
     "core-js": "^3.32.2",
     "crypto-js": "^4.1.1",

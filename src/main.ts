@@ -6,6 +6,8 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import 'element-plus/dist/index.css';
 import {ElementUI} from "@/common/config/ElementUI";
+import "ant-design-vue/dist/antd.less";
+import {AntDesign} from "@/common/config/AntDesign";
 
 NProgress.configure({easing: 'ease', speed: 500, showSpinner: false});
 
@@ -32,5 +34,6 @@ router.afterEach(() => {
 createApp(App)
     .use(router)
     .use(ElementUI)
+    .use(AntDesign)
     .use(VueCookies)
     .mount('#app')
