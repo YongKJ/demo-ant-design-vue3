@@ -41,7 +41,7 @@
         ></el-input>
         <valid-code
             ref="validCode"
-            style="float: right;background-color: #f8f9fa;border-radius: 5px;"
+            style="margin-left: auto;background-color: #f8f9fa;border-radius: 5px;"
         ></valid-code>
       </el-form-item>
 
@@ -111,6 +111,16 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
+:deep(.el-input--large .el-input__wrapper) {
+  padding: 1px 0;
+}
+
+:deep(.el-input__inner) {
+  padding: 0 15px;
+  border-radius: 4px;
+}
+
 /deep/ .el-upload-list__item-name:hover {
   color: #606266;
 }
