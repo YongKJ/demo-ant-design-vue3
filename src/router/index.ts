@@ -4,7 +4,7 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
         redirect: {
-            name: "design"
+            name: "ant"
         }
     },
     {
@@ -27,6 +27,14 @@ const routes: Array<RouteRecordRaw> = [
         path: "/design",
         name: "design",
         component: () => import("@/views/AntDesignTest.vue"),
+        meta: {
+            title: "案例测试"
+        }
+    },
+    {
+        path: "/ant",
+        name: "ant",
+        component: () => import("@/views/AntDesignDemo.vue"),
         meta: {
             title: "案例测试"
         }

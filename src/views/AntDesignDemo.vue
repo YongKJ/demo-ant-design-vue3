@@ -1,9 +1,9 @@
 <template>
-  <wallpaper type="snow">
+  <wallpaper-plus type="snow">
     <a-button
         type="primary"
         style="z-index: 0"
-        @click="antDesignTestService.test()">
+        @click="antDesignDemoService.test()">
       Primary Button
     </a-button>
 
@@ -15,8 +15,8 @@
         <a-input
             class="input"
             placeholder="请输入邮箱地址或用户名..."
-            v-model:value="antDesignTestService.userName"
-            @keyup.enter.native="antDesignTestService.connect()"
+            v-model:value="antDesignDemoService.userName"
+            @keyup.enter.native="antDesignDemoService.connect()"
         />
       </a-col>
       <a-col :span="24">
@@ -24,57 +24,57 @@
             class="input"
             type="password"
             placeholder="请输入密码..."
-            v-model:value="antDesignTestService.password"
+            v-model:value="antDesignDemoService.password"
         />
       </a-col>
       <a-col :span="24">
         <a-button
             type="primary"
             class="primary-button"
-            @click="antDesignTestService.connect()">连接websocket</a-button>
+            @click="antDesignDemoService.connect()">连接websocket</a-button>
       </a-col>
       <a-col :span="24">
         <a-button
             type="primary"
             class="primary-button"
-            @click="antDesignTestService.disconnect()">关闭websocket</a-button>
+            @click="antDesignDemoService.disconnect()">关闭websocket</a-button>
       </a-col>
       <a-col :span="24">
         <a-button
             type="primary"
             class="primary-button"
-            @click="antDesignTestService.login()">登录</a-button>
+            @click="antDesignDemoService.login()">登录</a-button>
       </a-col>
       <a-col :span="24">
         <a-button
             danger
             class="blue-button"
-            @click="antDesignTestService.register()">还没有账号？</a-button>
+            @click="antDesignDemoService.register()">还没有账号？</a-button>
       </a-col>
       <a-col :span="24">
         <a-button
             danger
             class="danger-button"
-            @click="antDesignTestService.reset()">忘记密码？</a-button>
+            @click="antDesignDemoService.reset()">忘记密码？</a-button>
       </a-col>
     </a-row>
-  </wallpaper>
+  </wallpaper-plus>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import Wallpaper from "@/components/Wallpaper.vue";
-import {AntDesignTestService} from "@/common/service/AntDesignTestService";
+import WallpaperPlus from "@/components/WallpaperPlus.vue";
+import {AntDesignDemoService} from "@/common/service/AntDesignDemoService";
 
 export default defineComponent({
-  name: "AntDesignTest",
+  name: "AntDesignDemo",
   data() {
     return {
-      antDesignTestService: new AntDesignTestService(this),
+      antDesignDemoService: new AntDesignDemoService(this),
     }
   },
   components: {
-    Wallpaper,
+    WallpaperPlus,
   },
 });
 </script>

@@ -17,6 +17,7 @@ router.beforeEach((to, from, next) => {
     case "/test":
     case "/demo":
     case "/design":
+    case "/ant":
       document.title = (<Record<string, any>>to.meta).title;
       next();
       break;
